@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ArrowDownIcon, DevicePhoneMobileIcon, UserGroupIcon, QrCodeIcon, CreditCardIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import screenRecording from './assets/ScreenRecording_12-31-2024 20-31-24_1.mov'
+import screenRecording from './assets/screen-recording-optimized.mp4'
 import homepageImage from './assets/IMG_1407.jpg'
 import networkImage from './assets/IMG_1403.jpg'
 
