@@ -35,6 +35,9 @@ jobs:
         env:
           VITE_BASE_URL: '/BumpInWeb'
       
+      - name: Copy CNAME
+        run: cp public/CNAME dist/
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
