@@ -352,19 +352,22 @@ function App() {
           </p>
           
           {/* Video Showcase */}
-          <div className="video-showcase mb-16">
-            <div className="relative pb-[177.77%]">
-              <video 
-                className="absolute inset-0 w-full h-full object-cover"
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                src={screenRecording}
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
+          <div className="relative w-full h-[600px] overflow-hidden">
+            <video 
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              loading="lazy"
+              poster="/BumpInWeb/assets/IMG_1407-CBovArgS.jpg"
+            >
+              <source 
+                src="/BumpInWeb/assets/ScreenRecording_12-31-2024 20-31-24_1.mov" 
+                type="video/quicktime"
+              />
+            </video>
+            <div className="absolute inset-0 bg-black/30" />
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
