@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ArrowDownIcon, DevicePhoneMobileIcon, UserGroupIcon, QrCodeIcon, CreditCardIcon, XMarkIcon } from '@heroicons/react/24/outline'
-// import screenRecording from './assets/ScreenRecording_12-31-2024 20-31-24_1.mov'
+import screenRecording from './assets/ScreenRecording_12-31-2024 20-31-24_1.mov'
 import homepageImage from './assets/IMG_1407.jpg'
 import networkImage from './assets/IMG_1403.jpg'
 
@@ -352,21 +352,17 @@ function App() {
           </p>
           
           {/* Video Showcase */}
-          <div className="relative w-full h-[600px] overflow-hidden">
-            <video 
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay={true}
-              muted={true}
-              loop={true}
-              playsInline={true}
-              poster="/BumpInWeb/assets/IMG_1407-CBovArgS.jpg"
-            >
-              <source 
-                src="/BumpInWeb/assets/ScreenRecording_12-31-2024 20-31-24_1.mov" 
-                type="video/quicktime"
+          <div className="relative w-full h-[600px] overflow-hidden flex items-center justify-center">
+            <div className="video-showcase">
+              <video 
+                className="w-full h-full object-cover"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                src={screenRecording}
               />
-            </video>
-            <div className="absolute inset-0 bg-black/30" />
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
