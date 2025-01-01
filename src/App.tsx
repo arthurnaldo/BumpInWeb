@@ -3,6 +3,8 @@ import { ArrowDownIcon, DevicePhoneMobileIcon, UserGroupIcon, QrCodeIcon, Credit
 import screenRecording from './assets/screen-recording-optimized.mp4'
 import homepageImage from './assets/IMG_1407.jpg'
 import networkImage from './assets/IMG_1403.jpg'
+import profileListImage from './assets/IMG_1409.jpg'
+import profileViewImage from './assets/IMG_1408.jpg'
 
 function BumpinLogo() {
   return (
@@ -344,7 +346,10 @@ function App() {
         
         <div className="container mx-auto px-6 py-24 text-center">
           <h2 className="text-6xl font-bold mb-8 font-display">
-            Connect with Style
+            Connect with{" "}
+            <span className="font-['Abril_Fatface'] italic bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 bg-clip-text text-transparent" style={{ letterSpacing: "0.02em" }}>
+              Style
+            </span>
           </h2>
           <p className="text-xl mb-12 max-w-2xl mx-auto font-medium text-white/90">
             Share your contact info instantly with beautiful digital cards. 
@@ -628,7 +633,7 @@ function App() {
             <div className="text-center max-w-2xl mx-auto">
               <h3 className="text-3xl font-bold mb-6">The Future of Networking</h3>
               <p className="text-xl text-gray-600">
-                Join thousands of professionals who've already switched to Bumpin. 
+                Join professionals, academics and students who've already switched to Bumpin. 
                 Modern networking deserves modern tools.
               </p>
             </div>
@@ -702,6 +707,76 @@ function App() {
                     </div>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Profile Features Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16">
+              {/* Features List */}
+              <div className="flex flex-col justify-center">
+                <h3 className="text-4xl font-bold mb-6">Rich Profile Experience</h3>
+                <p className="text-xl text-gray-600 mb-8">
+                  Create and view detailed professional profiles that showcase your journey, achievements, and connections. 
+                  Stand out in your network with a profile that tells your story.
+                </p>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
+                      <UserGroupIcon className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Professional Showcase</h4>
+                      <p className="text-gray-600">Display your experience, skills, and achievements in a beautiful, easy-to-read format</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+                      <QrCodeIcon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Easy Profile Sharing</h4>
+                      <p className="text-gray-600">Share your profile instantly with a QR code or digital card</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
+                      <DevicePhoneMobileIcon className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Always Up-to-Date</h4>
+                      <p className="text-gray-600">Update your information once, and everyone in your network sees the changes instantly</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* App Screenshots */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-blue-100 transform -rotate-3 rounded-3xl"></div>
+                <div className="relative bg-white p-8 rounded-3xl shadow-xl">
+                  <div className="grid grid-cols-2 gap-8">
+                    <div className="rounded-2xl overflow-hidden shadow-lg">
+                      <img 
+                        src={profileListImage} 
+                        alt="Bumpin Profile List View" 
+                        className="w-full object-contain"
+                      />
+                    </div>
+                    <div className="rounded-xl overflow-hidden shadow-lg">
+                      <img 
+                        src={profileViewImage} 
+                        alt="Bumpin Profile View" 
+                        className="w-full object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -833,7 +908,7 @@ function App() {
         <div className="container mx-auto px-6 text-center">
           <h3 className="text-4xl font-bold mb-8">Ready to Start Bumpin?</h3>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Download now and join thousands of users making connections the smart way.
+            Download now and join professionals making connections the smart way.
           </p>
           <AppStoreButton className="scale-110" />
         </div>
