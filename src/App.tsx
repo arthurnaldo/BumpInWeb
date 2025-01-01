@@ -291,6 +291,7 @@ function App() {
   const [showPreOrderForm, setShowPreOrderForm] = useState(false)
   const [showAdmin, setShowAdmin] = useState(false)
   const [hasOrdered, setHasOrdered] = useState(false)
+  const [isVideoLoading, setIsVideoLoading] = useState(true)
 
   // Secret key combination to show admin view (press 'a' three times)
   useEffect(() => {
@@ -359,6 +360,11 @@ function App() {
           {/* Video Showcase */}
           <div className="relative w-full h-[600px] overflow-hidden flex items-center justify-center">
             <div className="video-showcase">
+              {isVideoLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm">
+                  <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
+                </div>
+              )}
               <video 
                 className="w-full h-full object-cover"
                 autoPlay 
@@ -366,6 +372,7 @@ function App() {
                 loop 
                 playsInline
                 src={screenRecording}
+                onLoadedData={() => setIsVideoLoading(false)}
               />
             </div>
           </div>
