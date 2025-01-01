@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ArrowDownIcon, DevicePhoneMobileIcon, UserGroupIcon, QrCodeIcon, CreditCardIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import screenRecording from './assets/ScreenRecording_12-31-2024 20-31-24_1.mov'
+// import screenRecording from './assets/ScreenRecording_12-31-2024 20-31-24_1.mov'
 import homepageImage from './assets/IMG_1407.jpg'
 import networkImage from './assets/IMG_1403.jpg'
 
@@ -355,11 +355,10 @@ function App() {
           <div className="relative w-full h-[600px] overflow-hidden">
             <video 
               className="absolute inset-0 w-full h-full object-cover"
-              autoPlay 
-              muted 
-              loop 
-              playsInline
-              loading="lazy"
+              autoPlay={true}
+              muted={true}
+              loop={true}
+              playsInline={true}
               poster="/BumpInWeb/assets/IMG_1407-CBovArgS.jpg"
             >
               <source 
