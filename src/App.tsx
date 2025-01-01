@@ -756,7 +756,7 @@ function App() {
             </div>
             <div className="card-preview">
               {/* Front of card */}
-              <div className="relative mb-8">
+              <div className="relative mb-8 animate-float-1">
                 <div className="aspect-[1.586/1] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600 shadow-xl">
                   <div className="absolute inset-0">
                     {/* Background pattern */}
@@ -794,29 +794,33 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -right-4 -bottom-4 w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center">
-                  <QrCodeIcon className="w-8 h-8 text-gray-800" />
-                </div>
               </div>
               
               {/* Back of card */}
-              <div className="relative transform -rotate-6">
-                <div className="aspect-[1.586/1] rounded-2xl overflow-hidden bg-white shadow-xl">
+              <div className="relative transform -rotate-6 animate-float-2">
+                <div className="aspect-[1.586/1] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-50/90 to-white/95 shadow-xl backdrop-blur-sm">
                   <div className="absolute inset-0">
                     {/* Background pattern */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[length:16px_16px]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-gray-50/40"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[length:16px_16px] opacity-50"></div>
+                    
+                    {/* Gradient overlays */}
+                    <div className="absolute right-0 top-0 w-48 h-48 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div className="absolute left-0 bottom-0 w-48 h-48 bg-gray-100/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
                     
                     {/* QR Code area */}
                     <div className="absolute inset-6 flex flex-col items-center justify-center">
-                      <div className="w-full aspect-square max-w-[180px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-3">
+                      <div className="w-full aspect-square max-w-[180px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-3 shadow-lg">
                         <QrCodeIcon className="w-full h-full text-white" />
                       </div>
                       <div className="mt-4 text-center">
-                        <div className="text-gray-400 text-sm">Scan to view profile</div>
+                        <div className="text-gray-500 text-sm font-medium">Scan to view profile</div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div className="absolute -right-4 -bottom-4 w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center">
+                  <QrCodeIcon className="w-8 h-8 text-gray-800" />
                 </div>
               </div>
             </div>
