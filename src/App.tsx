@@ -292,6 +292,7 @@ function App() {
   const [showAdmin, setShowAdmin] = useState(false)
   const [hasOrdered, setHasOrdered] = useState(false)
   const [isVideoLoading, setIsVideoLoading] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   // Secret key combination to show admin view (press 'a' three times)
   useEffect(() => {
@@ -325,7 +326,23 @@ function App() {
         <nav className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <BumpinLogo />
-            <div className="flex items-center gap-4">
+            
+            {/* Mobile menu button */}
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2"
+            >
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+
+            {/* Desktop menu */}
+            <div className="hidden md:flex items-center gap-4">
               <a 
                 href="#support" 
                 className="group relative inline-flex items-center gap-2 px-6 py-2 overflow-hidden"
@@ -357,6 +374,37 @@ function App() {
                 </div>
               </a>
               <AppStoreButton className="scale-90" />
+            </div>
+          </div>
+
+          {/* Mobile menu */}
+          <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} pt-4 pb-2`}>
+            <div className="flex flex-col gap-2">
+              <a 
+                href="#support"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              >
+                <div className="flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Support
+                </div>
+              </a>
+              <a 
+                href="#pre-order"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              >
+                <div className="flex items-center gap-2">
+                  <CreditCardIcon className="w-5 h-5" />
+                  Buy Cards
+                </div>
+              </a>
+              <div className="px-4 py-2">
+                <AppStoreButton />
+              </div>
             </div>
           </div>
         </nav>
