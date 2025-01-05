@@ -264,7 +264,7 @@ function AdminView() {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Address</th>
-              </tr>
+              </tr> 
             </thead>
             <tbody className="divide-y divide-gray-200">
               {orders.map((order: any, index: number) => (
@@ -918,6 +918,91 @@ function App() {
             Download now and join professionals making connections the smart way.
           </p>
           <AppStoreButton className="scale-110" />
+        </div>
+      </section>
+
+      {/* Support Section */}
+      <section id="support" className="bg-white py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12">Need Help?</h2>
+            <p className="text-xl text-gray-600 text-center mb-16">
+              Get support for your Bumpin experience. Our team is here to help.
+            </p>
+
+            {/* FAQ */}
+            <div className="space-y-8 mb-16">
+              <h3 className="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-bold text-lg mb-2">How do I share my digital card?</h4>
+                  <p className="text-gray-600">Simply open your Bumpin app and tap "Share". Your QR code will appear ready to be scanned.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-lg mb-2">How do I update my information?</h4>
+                  <p className="text-gray-600">Go to Profile &gt; Edit and update your details. Changes are instantly reflected for all your connections.</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-lg mb-2">Having trouble scanning?</h4>
+                  <p className="text-gray-600">Ensure good lighting and hold the phone steady. Clean your camera lens if needed.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-lg mb-2">How do I delete my account?</h4>
+                  <p className="text-gray-600">
+                    You can delete your account and all associated data in two ways:
+                    <br />
+                    1. In the app: Go to Profile &gt; Settings &gt; Delete Account
+                    <br />
+                    2. Email us at support@bumpin.us with the subject "Account Deletion Request"
+                    <br />
+                    <span className="text-sm mt-2 block">Note: Account deletion is permanent and cannot be undone. All your data will be permanently removed.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <DevicePhoneMobileIcon className="w-5 h-5 text-blue-600" />
+                  <span className="text-gray-600">
+                    <span className="font-semibold">Phone:</span> (650) 431-8235
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-gray-600">
+                    <span className="font-semibold">Email:</span> support@bumpin.us
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-gray-600">
+                    <span className="font-semibold">Response Time:</span> Within 24 hours
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <h4 className="font-bold mb-4">For immediate assistance, you can also:</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-600">
+                  <li>Call or text us directly</li>
+                  <li>Email us with your account details</li>
+                  <li>Visit our help center</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
