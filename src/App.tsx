@@ -327,6 +327,22 @@ function App() {
             <BumpinLogo />
             <div className="flex items-center gap-4">
               <a 
+                href="#support" 
+                className="group relative inline-flex items-center gap-2 px-6 py-2 overflow-hidden"
+              >
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 p-[1px] transition-all duration-300 group-hover:p-[2px]">
+                  <div className="h-full w-full rounded-[11px] bg-white/20 backdrop-blur-sm"></div>
+                </div>
+                {/* Content */}
+                <div className="relative flex items-center gap-2">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="font-semibold text-white">Support</span>
+                </div>
+              </a>
+              <a 
                 href="#pre-order" 
                 className="group relative inline-flex items-center gap-2 px-6 py-2 overflow-hidden"
               >
