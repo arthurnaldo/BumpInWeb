@@ -51,7 +51,9 @@ function BumpinLogo() {
 function AppStoreButton({ className = "" }: { className?: string }) {
   return (
     <a 
-      href="#" 
+      href="https://apps.apple.com/us/app/bumpin-connect-with-style/id6740063334" 
+      target="_blank"
+      rel="noopener noreferrer"
       className={`inline-flex items-center bg-black text-white rounded-xl hover:bg-gray-800 transition-colors px-6 py-2 ${className}`}
     >
       <div className="flex flex-col leading-tight text-left">
