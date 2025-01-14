@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { ArrowDownIcon, DevicePhoneMobileIcon, UserGroupIcon, QrCodeIcon, CreditCardIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import screenRecording from './assets/screen-recording-optimized.mp4'
 import homepageImage from './assets/IMG_1407.jpg'
-import networkImage from './assets/IMG_1403.jpg'
 import profileListImage from './assets/IMG_1409.jpg'
 import profileViewImage from './assets/IMG_1408.jpg'
 
@@ -733,8 +732,8 @@ function App() {
                   <div className="grid grid-cols-2 gap-8">
                     <div className="rounded-2xl overflow-hidden shadow-lg">
                       <img 
-                        src={networkImage} 
-                        alt="Bumpin Network View" 
+                        src={homepageImage} 
+                        alt="Bumpin Home Interface" 
                         className="w-full object-contain"
                       />
                     </div>
